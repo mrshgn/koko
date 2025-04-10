@@ -1,10 +1,212 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Welcome to koko!</title>
-  </head>
-  <body>
-    <h1>Hello from Cloudflare Pages 🎉</h1>
-    <p>My site is live now!</p>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Koko – Nature Friendly Tourism</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #27ae60;
+      --accent: #2ecc71;
+      --light-bg: #f0f9f4;
+      --white-bg: #ffffffee;
+      --font-color: #2c3e50;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Raleway', sans-serif;
+      color: var(--font-color);
+      background: linear-gradient(135deg, #d0f0c0, var(--light-bg));
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+    header {
+      background: linear-gradient(rgba(0, 100, 50, 0.6), rgba(0, 100, 50, 0.6)), url('images/header-bg.jpg') no-repeat center center/cover;
+      text-align: center;
+      padding: 6rem 1rem;
+      color: #ffffff;
+    }
+    header img {
+      max-width: 180px;
+      margin-bottom: 1rem;
+    }
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      animation: fadeIn 2s ease-in-out;
+    }
+    header p {
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background: var(--primary);
+      padding: 1rem;
+      gap: 2rem;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #d4fdd6;
+    }
+    section {
+      padding: 4rem 2rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    section h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+      font-size: 2.5rem;
+      color: var(--accent);
+    }
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+    .feature {
+      background: var(--white-bg);
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.3s ease;
+      position: relative;
+    }
+    .feature:hover {
+      transform: translateY(-8px);
+    }
+    .feature img {
+      width: 100%;
+      max-height: 160px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+    }
+    .feature i {
+      font-size: 2rem;
+      color: var(--primary);
+      margin-bottom: 1rem;
+    }
+    .contact-info {
+      background: var(--white-bg);
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .contact-info p {
+      font-size: 1.2rem;
+      margin: 0.5rem 0;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      color: #777;
+      background: #e9f9e5;
+    }
+    .icon-decor {
+      font-size: 3rem;
+      color: var(--accent);
+      text-align: center;
+      margin: 2rem 0;
+    }
+    .image-placeholder {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 10px;
+      margin: 2rem 0;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+      section {
+        padding: 2rem 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="images/logo.png" alt="Koko Logo" />
+    <h1>Welcome to Koko</h1>
+    <p>Eco-friendly adventures in nature’s lap 🌿</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#features">Features</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p style="text-align:center; max-width: 700px; margin: 0 auto;">
+      Koko is a community-driven nature tourism project promoting eco-conscious travel and experiences. We help people reconnect with the environment through peaceful stays, organic food, and immersive nature walks.
+    </p>
+    <img src="images/about.jpg" alt="About Image" class="image-placeholder">
+    <div class="icon-decor"><i class="fas fa-seedling"></i></div>
+  </section>
+
+  <section id="features">
+    <h2>Features & Services</h2>
+    <div class="features">
+      <div class="feature">
+        <i class="fas fa-tree"></i>
+        <img src="images/eco-stay.jpg" alt="Eco Stay Image">
+        <h3>Eco-Stays</h3>
+        <p>Stay in hand-crafted cottages built with sustainable materials.</p>
+      </div>
+      <div class="feature">
+        <i class="fas fa-hiking"></i>
+        <img src="images/trails.jpg" alt="Trail Image">
+        <h3>Guided Nature Trails</h3>
+        <p>Explore breathtaking trails led by local experts.</p>
+      </div>
+      <div class="feature">
+        <i class="fas fa-carrot"></i>
+        <img src="images/organic.jpg" alt="Organic Food Image">
+        <h3>Farm-to-Table Meals</h3>
+        <p>Enjoy fresh, organic meals prepared by local chefs.</p>
+      </div>
+    </div>
+    <div class="icon-decor"><i class="fas fa-leaf"></i></div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="contact-info">
+      <p><strong>Name:</strong> Prakash Varma</p>
+      <p><strong>Phone:</strong> +91 90359 94295</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Koko. Designed with love for nature.</p>
+  </footer>
+</body>
 </html>
+
